@@ -1,0 +1,97 @@
+// , decimal number = 1,5
+Name = Amplifying Tome
+Icon Name = Amplifying_Tome.png
+Cost = 435
+AP = 20
+### End Of Item ###
+//
+//
+//
+Name = Cloth Armor
+Icon Name = Cloth_Armor.png
+Cost = 300
+Armor = 15
+### End Of Item ###
+//
+//
+//
+Name = Null-Magic Mantle
+Icon Name = Null-Magic_Mantle.png
+Cost = 300
+Magic Res = 25
+### End Of Item ###
+//
+//
+//
+Name = Dagger
+Icon Name = Dagger.png
+Cost = 300
+Attack Speed = 0,12
+### End Of Item ###
+//
+//
+Name = Needlessly Large Rod
+Icon Name = Needlessly_Large_Rod.png
+Cost = 1250
+AP = 60
+### End Of Item ###
+//
+//
+//
+Name = Trinity Force
+Icon Name = Trinity_Force.png
+Cost = 3733
+AD = 25
+HP = 250
+MP = 250
+CDR = 0,20
+Move Speed = 35
+// change later
+Attack Speed = 0,40
+### End Of Item ###
+//
+//
+//     no icons
+// 
+//Name = B. F. Sword
+//Icon Name = B._F._Sword.png
+//Cost = 1300
+//AD = 40
+//### End Of Item ###
+//
+//
+//
+//Name = Essence Reaver
+//Icon Name = Essence_Reaver.png
+//Cost = 3400
+//AD = 70
+//CDR = 0,10
+//Crit Chance = 0,20
+//### End Of Item ###
+//
+//
+//
+//Name = Blasting Wand
+//Icon Name = Blasting_Wand.png
+//Cost = 850
+//AP = 40
+//### End Of Item ###
+//
+//
+//
+//Name = Long Sword
+//Icon Name = Long_Sword.png
+//Cost = 350
+//AD = 10
+//### End Of Item ###
+//
+//
+//
+//Name = Pickaxe
+//Icon Name = Pickaxe.png
+//Cost = 875
+//AD = 25
+//### End Of Item ###
+//
+//
+//

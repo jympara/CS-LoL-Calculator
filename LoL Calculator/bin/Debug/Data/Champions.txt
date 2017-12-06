@@ -1,0 +1,133 @@
+Name = Aatrox
+Icon Name = Aatrox.png
+Resource <mana/energy/rage/heat> = rage
+AD = 60,376 + 3,2
+HP = 580 + 85
+HP5 = 6,59 + 0,5
+MP = 100 + 0
+MP5 = 0 + 0
+Armor = 24,384 + 3,8
+Magic Res = 32,1 + 1,25
+Attack Speed = 0,651 + 0,03
+Move Speed = 345
+Range = 150
+### End Of Champion ###
+//
+//
+//
+Name = Ahri
+Icon Name = Ahri.png
+Resource <mana/energy/rage/heat> = mana
+AD = 53,04 + 3
+HP = 514,4 + 80
+HP5 = 6,508 + 0,6
+MP = 334 + 50
+MP5 = 6 + 0,8
+Armor = 20,88 + 3,5
+Magic Res = 30 + 0,5
+Attack Speed = 0,668 + 0,02
+Move Speed = 330
+Range = 550
+### End Of Champion ###
+//
+//
+//
+Name = Akali
+Icon Name = Akali.png
+Resource <mana/energy/rage/heat> = energy
+AD = 58,376 + 3,2
+HP = 587,8 + 85
+HP5 = 8,342 + 0,65
+MP = 200 + 0
+MP5 = 50 + 0
+Armor = 26,38 + 3,5
+Magic Res = 32,1 + 1,25
+Attack Speed = 0,694 + 0,031
+Move Speed = 350
+Range = 125
+### End Of Champion ###
+//
+//
+//
+Name = Alistar
+Icon Name = Alistar.png
+Resource <mana/energy/rage/heat> = mana
+AD = 61,1116 + 3,62
+HP = 613,36 + 106
+HP5 = 8,678 + 0,85
+MP = 278,84 + 38
+MP5 = 8,5 + 0,8
+Armor = 24,38 + 3,5
+Magic Res = 32,1 + 1,25
+Attack Speed = 0,625 + 0,02125
+Move Speed = 330
+Range = 125
+### End Of Champion ###
+//
+//
+//
+Name = Amumu
+Icon Name = Amumu.png
+Resource <mana/energy/rage/heat> = mana
+AD = 53,384 + 3,8
+HP = 613,12 + 84
+HP5 = 8,878 + 0,85
+MP = 287,2 + 40
+MP5 = 7,382 + 0,525
+Armor = 23,544 + 3,8
+Magic Res = 32,1 + 1,25
+Attack Speed = 0,638 + 0,0218
+Move Speed = 335
+Range = 125
+### End Of Champion ###
+//
+//
+//
+Name = Anivia
+Icon Name = Anivia.png
+Resource <mana/energy/rage/heat> = mana
+AD = 51,376 + 3,2
+HP = 467,6 + 70
+HP5 = 5,574 + 0,55
+MP = 396,04 + 50
+MP5 = 6 + 0,8
+Armor = 21,22 + 4
+Magic Res = 30 + 0,5
+Attack Speed = 0,625 + 0,0168
+Move Speed = 325
+Range = 600
+### End Of Champion ###
+//
+//
+//
+Name = Annie
+Icon Name = Annie.png
+Resource <mana/energy/rage/heat> = mana
+AD = 50,41 + 2,625
+HP = 511,68 + 76
+HP5 = 5,424 + 0,55
+MP = 334 + 50
+MP5 = 6 + 0,8
+Armor = 19,22 + 4
+Magic Res = 30 + 0,5
+Attack Speed = 0,579 + 0,0136
+Move Speed = 335
+Range = 575
+### End Of Champion ###
+//
+//
+//
+Name = Miss Fortune
+Icon Name = Miss_Fortune.png
+Resource <mana/energy/rage/heat> = mana
+AD = 46 + 1
+HP = 530 + 85
+HP5 = 6,192 + 0,65
+MP = 325,84 + 35
+MP5 = 8,042 + 0,65
+Armor = 24,04 + 3
+Magic Res = 30 + 0,5
+Attack Speed = 0,656 + 0,03
+Move Speed = 325
+Range = 500
+### End Of Champion ###

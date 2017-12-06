@@ -1,0 +1,770 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DFB0F49-4BC8-4E53-AD0C-9FB2FBD1F03F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LoL_Calculator</RootNamespace>
+    <AssemblyName>LoL Calculator</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>lol.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BestVsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BestVsForm.Designer.cs">
+      <DependentUpon>BestVsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BestVsTeamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BestVsTeamForm.Designer.cs">
+      <DependentUpon>BestVsTeamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalculatorMain.cs" />
+    <Compile Include="ChampIcons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChampIcons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ChampOverviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChampOverviewForm.Designer.cs">
+      <DependentUpon>ChampOverviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompareForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompareForm.Designer.cs">
+      <DependentUpon>CompareForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data.cs" />
+    <Compile Include="Images.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemIcons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemIcons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MiscIcons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MiscIcons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetupResources.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupResources.Designer.cs">
+      <DependentUpon>SetupResources.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkillIcons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkillIcons.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BestVsForm.resx">
+      <DependentUpon>BestVsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BestVsTeamForm.resx">
+      <DependentUpon>BestVsTeamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChampIcons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ChampIcons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChampOverviewForm.resx">
+      <DependentUpon>ChampOverviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompareForm.resx">
+      <DependentUpon>CompareForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemIcons.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ItemIcons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MiscIcons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MiscIcons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SetupResources.resx">
+      <DependentUpon>SetupResources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkillIcons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SkillIcons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Aatrox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Ahri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Akali.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Alistar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Amumu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Anivia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Annie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Ashe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Aurelion_Sol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Azir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Bard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Blitzcrank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Brand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Braum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Caitlyn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Camille.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Cassiopeia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Cho%27Gath.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Corki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Darius.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Diana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Dr. Mundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Draven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Ekko.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Elise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Evelynn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Ezreal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Fiddlesticks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Fiora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Fizz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Galio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Gangplank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Garen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Gnar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Gragas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Graves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Hecarim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Heimerdinger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Illaoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Irelia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Ivern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Janna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Jarvan_IV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Jax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Jayce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Jhin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Jinx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Kalista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Karma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Karthus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Kassadin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Katarina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Kayle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Kayn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Kennen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Kha%27Zix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Kindred.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Kled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Kog%27Maw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\LeBlanc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Lee_Sin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Leona.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Lissandra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Lucian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Lulu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Lux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Malphite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Malzahar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Maokai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Master Yi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Miss_Fortune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Mordekaiser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Morgana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Nami.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Nasus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Nautilus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Nidalee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Nocturne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Nunu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Olaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Orianna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Orn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Pantheon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Poppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Quinn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Rakan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Rammus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Rek%27Sai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Renekton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Rengar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Riven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Rumble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Ryze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Sejuani.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Shaco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Shen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Shyvana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Singed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Sion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Sivir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Skarner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Sona.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Soraka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Swain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Syndra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Tahm_Kench.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Taliyah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Talon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Taric.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Teemo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Thresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Tristana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Trundle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Tryndamere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Twisted_Fate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Twitch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Udyr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Urgot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Varus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Vayne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Veigar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Vel%27Koz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Vi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Viktor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Vladimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Volibear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Warwick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Wukong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Xayah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Xerath.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Xin_Zhao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Yasuo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Yorick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Zac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Zed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Ziggs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Zilean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Champion_Icons\Zyra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\free-league-of-legends-lol-wallpaper_043827689_233.jpg" />
+    <None Include="bin\Debug\Images\thumb-1920-570631.jpg" />
+    <None Include="bin\Debug\Icons\Champions\Aatrox.png" />
+    <None Include="bin\Debug\Icons\Champions\Ahri.png" />
+    <None Include="bin\Debug\Icons\Champions\Akali.png" />
+    <None Include="bin\Debug\Icons\Champions\Alistar.png" />
+    <None Include="bin\Debug\Icons\Champions\Amumu.png" />
+    <None Include="bin\Debug\Icons\Champions\Anivia.png" />
+    <None Include="bin\Debug\Icons\Champions\Annie.png" />
+    <None Include="bin\Debug\Icons\Champions\Ashe.png" />
+    <None Include="bin\Debug\Icons\Champions\Aurelion_Sol.png" />
+    <None Include="bin\Debug\Icons\Champions\Azir.png" />
+    <None Include="bin\Debug\Icons\Champions\Bard.png" />
+    <None Include="bin\Debug\Icons\Champions\Blitzcrank.png" />
+    <None Include="bin\Debug\Icons\Champions\Brand.png" />
+    <None Include="bin\Debug\Icons\Champions\Braum.png" />
+    <None Include="bin\Debug\Icons\Champions\Caitlyn.png" />
+    <None Include="bin\Debug\Icons\Champions\Camille.png" />
+    <None Include="bin\Debug\Icons\Champions\Cassiopeia.png" />
+    <None Include="bin\Debug\Icons\Champions\Cho%27Gath.png" />
+    <None Include="bin\Debug\Icons\Champions\Corki.png" />
+    <None Include="bin\Debug\Icons\Champions\Darius.png" />
+    <None Include="bin\Debug\Icons\Champions\Diana.png" />
+    <None Include="bin\Debug\Icons\Champions\Dr. Mundo.png" />
+    <None Include="bin\Debug\Icons\Champions\Draven.png" />
+    <None Include="bin\Debug\Icons\Champions\Ekko.png" />
+    <None Include="bin\Debug\Icons\Champions\Elise.png" />
+    <None Include="bin\Debug\Icons\Champions\Evelynn.png" />
+    <None Include="bin\Debug\Icons\Champions\Ezreal.png" />
+    <None Include="bin\Debug\Icons\Champions\Fiddlesticks.png" />
+    <None Include="bin\Debug\Icons\Champions\Fiora.png" />
+    <None Include="bin\Debug\Icons\Champions\Fizz.png" />
+    <None Include="bin\Debug\Icons\Champions\Galio.png" />
+    <None Include="bin\Debug\Icons\Champions\Gangplank.png" />
+    <None Include="bin\Debug\Icons\Champions\Garen.png" />
+    <None Include="bin\Debug\Icons\Champions\Gnar.png" />
+    <None Include="bin\Debug\Icons\Champions\Gragas.png" />
+    <None Include="bin\Debug\Icons\Champions\Graves.png" />
+    <None Include="bin\Debug\Icons\Champions\Hecarim.png" />
+    <None Include="bin\Debug\Icons\Champions\Heimerdinger.png" />
+    <None Include="bin\Debug\Icons\Champions\Illaoi.png" />
+    <None Include="bin\Debug\Icons\Champions\Irelia.png" />
+    <None Include="bin\Debug\Icons\Champions\Ivern.png" />
+    <None Include="bin\Debug\Icons\Champions\Janna.png" />
+    <None Include="bin\Debug\Icons\Champions\Jarvan_IV.png" />
+    <None Include="bin\Debug\Icons\Champions\Jax.png" />
+    <None Include="bin\Debug\Icons\Champions\Jayce.png" />
+    <None Include="bin\Debug\Icons\Champions\Jhin.png" />
+    <None Include="bin\Debug\Icons\Champions\Jinx.png" />
+    <None Include="bin\Debug\Icons\Champions\Kalista.png" />
+    <None Include="bin\Debug\Icons\Champions\Karma.png" />
+    <None Include="bin\Debug\Icons\Champions\Karthus.png" />
+    <None Include="bin\Debug\Icons\Champions\Kassadin.png" />
+    <None Include="bin\Debug\Icons\Champions\Katarina.png" />
+    <None Include="bin\Debug\Icons\Champions\Kayle.png" />
+    <None Include="bin\Debug\Icons\Champions\Kayn.png" />
+    <None Include="bin\Debug\Icons\Champions\Kennen.png" />
+    <None Include="bin\Debug\Icons\Champions\Kha%27Zix.png" />
+    <None Include="bin\Debug\Icons\Champions\Kindred.png" />
+    <None Include="bin\Debug\Icons\Champions\Kled.png" />
+    <None Include="bin\Debug\Icons\Champions\Kog%27Maw.png" />
+    <None Include="bin\Debug\Icons\Champions\LeBlanc.png" />
+    <None Include="bin\Debug\Icons\Champions\Lee_Sin.png" />
+    <None Include="bin\Debug\Icons\Champions\Leona.png" />
+    <None Include="bin\Debug\Icons\Champions\Lissandra.png" />
+    <None Include="bin\Debug\Icons\Champions\Lucian.png" />
+    <None Include="bin\Debug\Icons\Champions\Lulu.png" />
+    <None Include="bin\Debug\Icons\Champions\Lux.png" />
+    <None Include="bin\Debug\Icons\Champions\Malphite.png" />
+    <None Include="bin\Debug\Icons\Champions\Malzahar.png" />
+    <None Include="bin\Debug\Icons\Champions\Maokai.png" />
+    <None Include="bin\Debug\Icons\Champions\Master Yi.png" />
+    <None Include="bin\Debug\Icons\Champions\Miss_Fortune.png" />
+    <None Include="bin\Debug\Icons\Champions\Mordekaiser.png" />
+    <None Include="bin\Debug\Icons\Champions\Morgana.png" />
+    <None Include="bin\Debug\Icons\Champions\Nami.png" />
+    <None Include="bin\Debug\Icons\Champions\Nasus.png" />
+    <None Include="bin\Debug\Icons\Champions\Nautilus.png" />
+    <None Include="bin\Debug\Icons\Champions\Nidalee.png" />
+    <None Include="bin\Debug\Icons\Champions\Nocturne.png" />
+    <None Include="bin\Debug\Icons\Champions\Nunu.png" />
+    <None Include="bin\Debug\Icons\Champions\Olaf.png" />
+    <None Include="bin\Debug\Icons\Champions\Orianna.png" />
+    <None Include="bin\Debug\Icons\Champions\Orn.png" />
+    <None Include="bin\Debug\Icons\Champions\Pantheon.png" />
+    <None Include="bin\Debug\Icons\Champions\Poppy.png" />
+    <None Include="bin\Debug\Icons\Champions\Quinn.png" />
+    <None Include="bin\Debug\Icons\Champions\Rakan.png" />
+    <None Include="bin\Debug\Icons\Champions\Rammus.png" />
+    <None Include="bin\Debug\Icons\Champions\Rek%27Sai.png" />
+    <None Include="bin\Debug\Icons\Champions\Renekton.png" />
+    <None Include="bin\Debug\Icons\Champions\Rengar.png" />
+    <None Include="bin\Debug\Icons\Champions\Riven.png" />
+    <None Include="bin\Debug\Icons\Champions\Rumble.png" />
+    <None Include="bin\Debug\Icons\Champions\Ryze.png" />
+    <None Include="bin\Debug\Icons\Champions\Sejuani.png" />
+    <None Include="bin\Debug\Icons\Champions\Shaco.png" />
+    <None Include="bin\Debug\Icons\Champions\Shen.png" />
+    <None Include="bin\Debug\Icons\Champions\Shyvana.png" />
+    <None Include="bin\Debug\Icons\Champions\Singed.png" />
+    <None Include="bin\Debug\Icons\Champions\Sion.png" />
+    <None Include="bin\Debug\Icons\Champions\Sivir.png" />
+    <None Include="bin\Debug\Icons\Champions\Skarner.png" />
+    <None Include="bin\Debug\Icons\Champions\Sona.png" />
+    <None Include="bin\Debug\Icons\Champions\Soraka.png" />
+    <None Include="bin\Debug\Icons\Champions\Swain.png" />
+    <None Include="bin\Debug\Icons\Champions\Syndra.png" />
+    <None Include="bin\Debug\Icons\Champions\Tahm_Kench.png" />
+    <None Include="bin\Debug\Icons\Champions\Taliyah.png" />
+    <None Include="bin\Debug\Icons\Champions\Talon.png" />
+    <None Include="bin\Debug\Icons\Champions\Taric.png" />
+    <None Include="bin\Debug\Icons\Champions\Teemo.png" />
+    <None Include="bin\Debug\Icons\Champions\Thresh.png" />
+    <None Include="bin\Debug\Icons\Champions\Tristana.png" />
+    <None Include="bin\Debug\Icons\Champions\Trundle.png" />
+    <None Include="bin\Debug\Icons\Champions\Tryndamere.png" />
+    <None Include="bin\Debug\Icons\Champions\Twisted_Fate.png" />
+    <None Include="bin\Debug\Icons\Champions\Twitch.png" />
+    <None Include="bin\Debug\Icons\Champions\Udyr.png" />
+    <None Include="bin\Debug\Icons\Champions\Urgot.png" />
+    <None Include="bin\Debug\Icons\Champions\Varus.png" />
+    <None Include="bin\Debug\Icons\Champions\Vayne.png" />
+    <None Include="bin\Debug\Icons\Champions\Veigar.png" />
+    <None Include="bin\Debug\Icons\Champions\Vel%27Koz.png" />
+    <None Include="bin\Debug\Icons\Champions\Vi.png" />
+    <None Include="bin\Debug\Icons\Champions\Viktor.png" />
+    <None Include="bin\Debug\Icons\Champions\Vladimir.png" />
+    <None Include="bin\Debug\Icons\Champions\Volibear.png" />
+    <None Include="bin\Debug\Icons\Champions\Warwick.png" />
+    <None Include="bin\Debug\Icons\Champions\Wukong.png" />
+    <None Include="bin\Debug\Icons\Champions\Xayah.png" />
+    <None Include="bin\Debug\Icons\Champions\Xerath.png" />
+    <None Include="bin\Debug\Icons\Champions\Xin_Zhao.png" />
+    <None Include="bin\Debug\Icons\Champions\Yasuo.png" />
+    <None Include="bin\Debug\Icons\Champions\Yorick.png" />
+    <None Include="bin\Debug\Icons\Champions\Zac.png" />
+    <None Include="bin\Debug\Icons\Champions\Zed.png" />
+    <None Include="bin\Debug\Icons\Champions\Ziggs.png" />
+    <None Include="bin\Debug\Icons\Champions\Zilean.png" />
+    <None Include="bin\Debug\Icons\Champions\Zyra.png" />
+    <None Include="bin\Debug\Images\thumb-1920-420408.jpg" />
+    <None Include="bin\Debug\Icons\Misc\Minus.ico" />
+    <None Include="bin\Debug\Icons\Misc\Plux.ico" />
+    <None Include="bin\Debug\Icons\Misc\Plus.ico" />
+    <None Include="bin\Debug\Icons\Misc\minus-0.png" />
+    <None Include="bin\Debug\Icons\Misc\plus-0.png" />
+    <None Include="bin\Debug\Icons\Misc\minus.png" />
+    <None Include="bin\Debug\Icons\Misc\plus.png" />
+    <Content Include="lol.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
